@@ -1,0 +1,42 @@
+body{
+    background-color: aquamarine;
+    border:2px,solid,brown;
+}
+h1{
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    color: antiquewhite;
+}
+.note{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    margin-top: 50px;
+    width: 1000px;
+    height: 280px;
+    background-color: bisque;
+    padding-left: 50px;
+    box-shadow: 100px;
+    border-radius: 40px;
+    border: 3px,solid,black;
+}
+button{
+    background-color: blueviolet;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+}
+.note input,.note textarea{
+    width: 800px;
+    height: max-content;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 2px,solid,black;
+}
+button:hover{
+    background-color: aqua;
+}
