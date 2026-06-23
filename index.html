@@ -6,11 +6,32 @@
         <title>MY NOTES APP</title>
         <h1>MY NOTES APP</h1>
         <div class="note">
-            <input type="text" placeholder="NOTE TITLE"><br>
-            <textarea rows="5" placeholder="Note Content"></textarea><br>
-            <button>Add Note</button><br>
+            <input type="text" id="title" placeholder="NOTE TITLE"><br>
+            <textarea rows="5" id="content" placeholder="Note Content"></textarea><br>
+            <button onclick="saveNote()">Add Note</button><br>
             <input type="text" placeholder="Search notes by title"></div><br>
         </div>
+        <script>
+async function saveNote() {
+
+    const title = document.getElementById("title").value;
+    const content = document.getElementById("content").value;
+
+    const response = await fetch("http://localhost:5000/note", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            title: title,
+            content: content
+        })
+    });
+
+    const data = await response.json();
+    alert(data.message);
+}
+</script>
         
     </body>
 </html>
